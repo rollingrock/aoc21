@@ -9,10 +9,7 @@
 using namespace std;
 
 struct Board {
-	union {
-		int arr[25];
-		int data[5][5];
-	};
+	int arr[25];
 
 	union {
 		bool pickedArr[25];
@@ -107,7 +104,11 @@ int main()
 
 	int numBoards = boards.size();
 
-	bool won[25] = { false };
+	bool* won = new bool[numBoards];
+
+	for (auto i = 0; i < numBoards; i++) {
+		won[i] = false;
+	}
 
 	for (auto& curNum : picked) {
 		for (auto i = 0; i < 25; i++) {
