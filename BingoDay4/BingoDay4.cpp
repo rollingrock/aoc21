@@ -15,6 +15,8 @@ struct Board {
 		bool pickedArr[25];
 		bool pickedData[5][5] = { false };
 	};
+
+	bool hasWon = false;
 };
 
 vector<Board> boards;
@@ -104,15 +106,9 @@ int main()
 
 	int numBoards = boards.size();
 
-	bool* won = new bool[numBoards];
-
-	for (auto i = 0; i < numBoards; i++) {
-		won[i] = false;
-	}
-
 	for (auto& curNum : picked) {
 		for (auto i = 0; i < 25; i++) {
-			for (auto c = 0; auto & b : boards) {
+			for (auto & b : boards) {
 				if (curNum == b.arr[i]) {
 					b.pickedArr[i] = true;
 					if (checkRow(b, i / 5) || checkCol(b,  i % 5)) {
@@ -121,14 +117,13 @@ int main()
 							winNum = curNum;
 							winBoard = b;
 						}
-						if (!won[c]) {
+						if (!b.hasWon) {
 							lastNum = curNum;
 							lastBoard = b;
-							won[c] = true;
+							b.hasWon = true;
 						}
 					}
 				}
-				c++;
 			}
 		}
 	}
