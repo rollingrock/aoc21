@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BingoDay4", "BingoDay4\Bing
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Venture_Day5", "Venture_Day5\Venture_Day5.vcxproj", "{E931F15C-6B40-49F8-A963-EDD861CEBF15}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lanternfish_day6", "lanternfish_day6\lanternfish_day6.vcxproj", "{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{E931F15C-6B40-49F8-A963-EDD861CEBF15}.Release|x64.Build.0 = Release|x64
 		{E931F15C-6B40-49F8-A963-EDD861CEBF15}.Release|x86.ActiveCfg = Release|Win32
 		{E931F15C-6B40-49F8-A963-EDD861CEBF15}.Release|x86.Build.0 = Release|Win32
+		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Debug|x64.ActiveCfg = Debug|x64
+		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Debug|x64.Build.0 = Debug|x64
+		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Debug|x86.ActiveCfg = Debug|Win32
+		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Debug|x86.Build.0 = Debug|Win32
+		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Release|x64.ActiveCfg = Release|x64
+		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Release|x64.Build.0 = Release|x64
+		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Release|x86.ActiveCfg = Release|Win32
+		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
