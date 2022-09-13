@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Venture_Day5", "Venture_Day
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lanternfish_day6", "lanternfish_day6\lanternfish_day6.vcxproj", "{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crabs_day7", "crabs_day7\crabs_day7.vcxproj", "{08798428-1941-4C12-8FD4-D74330E3B9D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Release|x64.Build.0 = Release|x64
 		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Release|x86.ActiveCfg = Release|Win32
 		{E9B07B3C-1B38-4B62-9EF8-7372EDAE3E77}.Release|x86.Build.0 = Release|Win32
+		{08798428-1941-4C12-8FD4-D74330E3B9D4}.Debug|x64.ActiveCfg = Debug|x64
+		{08798428-1941-4C12-8FD4-D74330E3B9D4}.Debug|x64.Build.0 = Debug|x64
+		{08798428-1941-4C12-8FD4-D74330E3B9D4}.Debug|x86.ActiveCfg = Debug|Win32
+		{08798428-1941-4C12-8FD4-D74330E3B9D4}.Debug|x86.Build.0 = Debug|Win32
+		{08798428-1941-4C12-8FD4-D74330E3B9D4}.Release|x64.ActiveCfg = Release|x64
+		{08798428-1941-4C12-8FD4-D74330E3B9D4}.Release|x64.Build.0 = Release|x64
+		{08798428-1941-4C12-8FD4-D74330E3B9D4}.Release|x86.ActiveCfg = Release|Win32
+		{08798428-1941-4C12-8FD4-D74330E3B9D4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
