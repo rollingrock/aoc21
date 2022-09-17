@@ -1,11 +1,10 @@
-#!"C:\Anaconda3\python.exe"
 
 
 from concurrent.futures import process
 from math import ceil
+import copy
 
-
-inF = open("input_samp.txt", 'r')
+inF = open("input_day9.txt", 'r')
 
 hMap = [[int(i) for i in line if i != '\n'] for line in inF]
 
@@ -13,10 +12,31 @@ hMap = [[int(i) for i in line if i != '\n'] for line in inF]
 maxY = len(hMap[0])
 maxX = len(hMap)
 
-processed = hMap
+processed = copy.deepcopy(hMap)
 
 basins = [0]
 newBasin = -1
+
+def makeBasin(basin, x, y):
+
+        processed[x][y] = basin
+
+        if ((x-1) >= 0):
+            if (hMap[x-1][y] < 9) and (processed[x-1][y] >= 0):
+                makeBasin(basin, x-1, y) 
+
+        if ((x+1) < maxX):
+            if (hMap[x+1][y] < 9) and (processed[x+1][y] >= 0):
+                makeBasin(basin, x+1, y) 
+
+        if ((y-1) >= 0):
+            if (hMap[x][y-1] < 9) and (processed[x][y-1] >= 0):
+                makeBasin(basin, x, y-1) 
+
+        if ((y+1) < maxY):
+            if (hMap[x][y+1] < 9) and (processed[x][y+1] >= 0):
+                makeBasin(basin, x, y+1) 
+
 
 sum = 0
 for x in range(maxX):
@@ -42,7 +62,7 @@ for x in range(maxX):
                 lower = False 
 
         if (lower):
-            sum += int(p) + 1
+            sum += p + 1
 
 
 # part 2
@@ -51,39 +71,22 @@ for x in range(maxX):
             if (p == 9):
                 processed[x][y] = 9
             else:
-                basin = 0
+                makeBasin(newBasin, x, y)
+                newBasin = newBasin - 1
 
-                if ((x-1) >= 0):
-                    if (processed[x-1][y] < 0):
-                        basin = processed[x-1][y]
 
-                if ((x+1) < maxX):
-                    if (processed[x+1][y] < 0):
-                        basin = processed[x+1][y]
-
-                if ((y-1) >= 0):
-                    if (processed[x][y-1] < 0):
-                        basin = processed[x][y-1]
-
-                if ((y+1) < maxX):
-                    if (processed[x][y+1] < 0):
-                        basin = processed[x][y+1]
-
-                if (basin < 0):
-                    processed[x][y] = basin
-                else:
-                    processed[x][y] = newBasin
-                    newBasin -= 1
-
+print("\n")
 
 basins = [len([c for row in processed for c in row if (c == -i) and (c != 9)]) for i in range(abs(newBasin))]
 basins.sort(reverse=True)        
         
 
-print ("Part 1 = " + str(sum))
 
-print(processed)
+for x in processed:
+    print(x)
+
 print(basins)
 
 mult = basins[0] * basins[1] * basins[2]
+print ("Part 1 = " + str(sum))
 print("Part 2 = " + str(mult))
